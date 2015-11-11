@@ -54,7 +54,7 @@ public class Servers implements Serializable {
         @JoinColumn(name = "adress", referencedColumnName = "adress")}, inverseJoinColumns = {
         @JoinColumn(name = "user_name", referencedColumnName = "user_name")})
     @ManyToMany(fetch = FetchType.LAZY)
-    private List<Users> usersList;
+    private List<User> usersList;
 
     public Servers() {
     }
@@ -111,11 +111,11 @@ public class Servers implements Serializable {
         this.connectedUsers = connectedUsers;
     }
 
-    public List<Users> getUsersList() {
+    public List<User> getUsersList() {
         return usersList;
     }
 
-    public void setUsersList(List<Users> usersList) {
+    public void setUsersList(List<User> usersList) {
         this.usersList = usersList;
     }
 
