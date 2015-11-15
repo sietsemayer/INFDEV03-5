@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.hro.infdev03_5.entity.Servers;
@@ -26,6 +27,8 @@ public class WicketApplication extends WebApplication {
 	public Class<? extends WebPage> getHomePage() {
 		return SignIn.class;
 	}
+	
+	 
 
 	@Override
 	public void init() {

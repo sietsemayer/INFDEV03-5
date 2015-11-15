@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
 <style>
 label {
 	background-color: #eee;
@@ -9,6 +10,8 @@ label {
 .feedbackPanelERROR {
 	color: red;
 }
+
+
 </style>
 </head>
 <body>
@@ -17,14 +20,13 @@ label {
 	<div wicket:id="feedback"></div>
 	<form wicket:id="userForm">
 		<p>
-			<label>Username</label>: 
-			<input wicket:id="username" type="text" size="20" />
-			<label>Password</label>:
-			<input wicket:id="password" type="password" size="20" /> 
-			
+			<label>Username</label>: <input wicket:id="username" type="text"
+				size="20" /> <label>Password</label>: <input wicket:id="password"
+				type="password" size="20" />
+
 		</p>
 		<input type="submit" value="Register" />
 	</form>
-
+	<span wicket:id="UserDoesNotExist"></span>
 </body>
 </html>

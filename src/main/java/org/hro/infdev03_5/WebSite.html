@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<title>Wicket Example -Website</title>
+<style>
+#header {
+	text-align: center;
+}
+
+#left {
+	padding: 10px;
+	vertical-align: top;
+	width: 20%;
+	height: 120px;
+}
+
+#content {
+	vertical-align: top;
+	width: 80%;
+	height: 100%;
+}
+
+#footer {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<wicket>
+	<div id="header" class="borderedBlock">
+		<table width="100%">
+			<h2>Sietse Mayer | DINF3 | INFSEN21-2 | NEO4J</h2>
+		</table>
+	</div>
+	<table width="100%">
+		<tr>
+			<td id="left" class="borderedBlock">
+				<ul>
+					<ol>
+						<a href="#" wicket:id="homeLink">Home</a>
+					</ol>
+					<br />
+					<ol>
+						<a href="#" wicket:id="manageAccount">Manage Account</a>
+					</ol>
+					<br />
+					
+					<ol>
+						<a href="#" wicket:id="manageCharacters">Manage Characters</a>
+					</ol>
+								
+				</ul>
+			</td>
+			<td id="content" class="borderedBlock"><wicket:child /></td>
+		</tr>
+	</table>
+	<div id="footer" class="borderedBlock">@ Sietse Mayer | 0870575 |
+		DINF3 | 2014 - 2015</div>
+	</wicket>
+</body>
+</html>
