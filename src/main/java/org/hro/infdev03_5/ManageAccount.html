@@ -2,14 +2,71 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 	<wicket:extend>
-		<h3>MANAGE ACCOUNT</h3>
-	 	<label wicket:id="result"></label>
-	</wicket:extend>	
+		<h4>MANAGE ACCOUNT</h4>
+		<table>
+			<tr>
+				<td>Username :</td>
+				<td><label wicket:id="usernameLabel"></label></td>
+				<td><td><input type="submit" wicket:id="usernameButton" value="Change username" ></td></td>
+			</tr>
+
+			<tr>
+				<td>Firstname :</td>
+				<td><label wicket:id="userFirstNameLabel"></label></td>
+				<td><td><input type="submit" wicket:id="userfirstnameButton" value="Change firstname" ></td></td>
+			</tr>
+
+
+			<tr>
+				<td>Lastname :</td>
+				<td><label wicket:id="userLastnameLabel"></label></td>
+				<td><td><input type="submit" wicket:id="userlastnameButton" value="Change lastname" ></td></td>
+			</tr>
+
+			<tr>
+				<td>Iban :</td>
+				<td><label wicket:id="userIBANLabel"></label></td>
+			</tr>
+
+			<tr>
+				<td>Free character slots :</td>
+				<td><label wicket:id="userCharactetSlotsLabel"></label></td>
+			</tr>
+
+			<tr>
+				<td>User balance :</td>
+				<td><label wicket:id="userBalanceLabel"></label></td>
+			</tr>
+
+			<tr>
+				<td>Last payment :</td>
+				<td><label wicket:id="userLastPaymentLabel"></label></td>
+			</tr>
+
+			<tr>
+				<td>Months payed :</td>
+				<td><label wicket:id="userMonthsPayesLabel"></label></td>
+			</tr>
+
+
+			<tr>
+				<td>Password :</td>
+				<td>********</td>
+				<td><td><input type="submit" wicket:id="passwordButton" value="Change password" /></td></td>
+			</tr>
+
+			<tr>
+				<td>Banned :</td>
+				<td><label wicket:id="userBannedLabel"></label></td>
+			</tr>
+		</table>
+	</wicket:extend>
 </body>
 </html>

@@ -56,13 +56,13 @@ body { margin-top : 0; padding-top : 0;}
 a, a:visited, a:hover, a:active {
 	color : #6493D2;
 }
-h2 {
-	padding : 0; margin:0;
-	font-size:36pt;
-	color:#FF5500;
-}
 h3 {
 	padding : 0; margin:0;
 	font-size:24pt;
+	color:#FF5500;
+}
+h4 {
+	padding : 0; margin:0;
+	font-size:16pt;
 	color:#092E67;
 }
