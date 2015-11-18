@@ -11,17 +11,17 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.Persistence;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
-
-import org.hro.infdev03_5.exceptions.MaximumCharactersExeption;
 
 /**
  *
@@ -220,6 +220,8 @@ public class User implements Serializable {
     public String toString() {
         return "jpatutorial.Users[ userName=" + userName + " ]";
     }
+
+	
     
     
     
