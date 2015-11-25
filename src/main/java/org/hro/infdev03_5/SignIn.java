@@ -12,6 +12,8 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.hro.infdev03_5.entity.User;
+import org.hro.infdev03_5.util.PasswordValidator;
+import org.hro.infdev03_5.util.UsernameValidator;
 
 public class SignIn extends WebPage {
 

@@ -1,0 +1,43 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Change IBAN</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+
+<style>
+.feedbackPanelINFO {
+	color: green;
+}
+</style>
+</head>
+<body>
+
+
+
+	<h3>Change IBAN number</h3>
+	<p>
+	<div wicket:id="feedback"></div>
+	<form wicket:id="userForm">
+
+		<table>
+			<tr>
+				<td>Your current IBAN number :</td>
+				<td><label wicket:id="ChangeIBANLabel"></label></td>
+			</tr>
+			<tr>
+				<td><label>New IBAN number : </label></td>
+				<td><input wicket:id="newibannumber" type="text" size="20"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Change IBAN" /></td>
+			</tr>
+		</table>
+
+	</form>
+
+
+	<a wicket:id="close" href="#">close</a>
+
+</body>
+</html>

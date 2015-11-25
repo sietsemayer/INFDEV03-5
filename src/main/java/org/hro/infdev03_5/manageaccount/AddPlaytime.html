@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<style>
+ 
+.feedbackPanelINFO {
+	color: green;
+}
+</style>
+</head>
+<body>
+	<h3>Add playtime</h3>
+
+	<div wicket:id="feedback"></div>
+	<form wicket:id="form">
+		<p>
+			<label><h4>Select playtime</h4> </label> <br /> <select
+				wicket:id="playtimeDropdownlist"></select>
+		</p>
+		<input type="submit" value="Display" />
+	</form>
+	<a wicket:id="close" href="#">close</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Change IBAN</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<style>
+ 
+.feedbackPanelINFO {
+	color: green;
+}
+</style>
+</head>
+<body>
+
+
+
+	<h3>Add character slot</h3>
+	<p>
+		 
+	<div wicket:id="feedback"></div>
+	<form wicket:id="userForm">
+
+	
+
+		<table>
+			<tr>
+				<td>Current amount :</td>
+				<td><label wicket:id="CurrentAmountLabel"></label></td>
+			</tr>
+			<tr>
+				<td>Slots to use :</td>
+				<td><label wicket:id="ChangeSlotLabel"></label></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Add Slot" /></td>
+			</tr>
+		</table>
+
+	</form>
+
+
+	<a wicket:id="close" href="#">close</a>
+
+</body>
+</html>

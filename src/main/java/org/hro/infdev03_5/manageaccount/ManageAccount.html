@@ -1,0 +1,85 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<h4>MANAGE ACCOUNT</h4>
+		<p>
+		<table>
+			<tr>
+				<td>Username :</td>
+				<td><label wicket:id="usernameLabel"></label></td>
+
+			</tr>
+
+			<tr>
+				<td>Firstname :</td>
+				<td><label wicket:id="userFirstNameLabel"></label></td>
+
+			</tr>
+
+
+			<tr>
+				<td>Lastname :</td>
+				<td><label wicket:id="userLastnameLabel"></label></td>
+
+			</tr>
+
+			<tr>
+				<td>Iban :</td>
+				<td><label wicket:id="userIBANLabel"></label></td>
+				<td><input type="submit" wicket:id="ChangeIBAN"
+					value="Change IBAN" /></td>
+			</tr>
+
+			<tr>
+				<td>Free character slots :</td>
+				<td><label wicket:id="userCharactetSlotsLabel"></label></td>
+				<td><input type="submit" wicket:id="AddSlot" value="Add a slot" /></td>
+
+			</tr>
+
+			<tr>
+				<td>User balance :</td>
+				<td><label wicket:id="userBalanceLabel"></label></td>
+				<td><input type="submit" wicket:id="AddBalance"
+					value="Add balance" /></td>
+			</tr>
+
+			<tr>
+				<td>Last payment :</td>
+				<td><label wicket:id="userLastPaymentLabel"></label></td>
+			</tr>
+
+			<tr>
+				<td>Months payed :</td>
+				<td><label wicket:id="userMonthsPayesLabel"></label></td>
+				<td><input type="submit" wicket:id="AddPlaytime"
+					value="Add playtime" /></td>
+			</tr>
+
+
+			<tr>
+				<td>Password :</td>
+				<td>********</td>
+				<td><input type="submit" wicket:id="ChangePassword"
+					value="Change password" /></td>
+			</tr>
+
+			<tr>
+				<td>Banned :</td>
+				<td><label wicket:id="userBannedLabel"></label></td>
+			</tr>
+
+		</table>
+
+	</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+ <link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<style>
+ 
+.feedbackPanelINFO {
+	color: green;
+}
+</style>
+</head>
+<body>
+	<h3>Add play amount</h3>
+
+	<div wicket:id="feedback"></div>
+	<form wicket:id="form">
+		<p>
+			<h4>Select one amount to add to your account</h4>
+			<br />
+			<select wicket:id="amount"></select>
+		</p>
+		<input type="submit" value="Add money" />
+	</form>
+ <a wicket:id = "close" href="#">close</a>
+    
+</body>
+</html>

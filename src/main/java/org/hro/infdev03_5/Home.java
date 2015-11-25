@@ -11,7 +11,7 @@ public class Home extends WebSite {
 		String usernameValue = parameters.get("username").toString();
 
 		final Label result = new Label("result", "Username : " + usernameValue );
-		add(result);
+		//add(result);
 	}
 
 
