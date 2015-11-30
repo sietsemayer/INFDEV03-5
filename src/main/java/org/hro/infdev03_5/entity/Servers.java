@@ -10,6 +10,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,6 +19,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.Table;
 
 /**
@@ -27,20 +31,23 @@ import javax.persistence.Table;
 @Table(name = "servers")
 @NamedQueries({
     @NamedQuery(name = "Servers.findAll", query = "SELECT s FROM Servers s"),
+    @NamedQuery(name = "Servers.findAllSorted", query = "SELECT s FROM Servers s ORDER BY s.name ASC"),
     @NamedQuery(name = "Servers.findByAdress", query = "SELECT s FROM Servers s WHERE s.adress = :adress"),
     @NamedQuery(name = "Servers.findByName", query = "SELECT s FROM Servers s WHERE s.name = :name"),
     @NamedQuery(name = "Servers.findByLocation", query = "SELECT s FROM Servers s WHERE s.location = :location"),
     @NamedQuery(name = "Servers.findByMaxUsers", query = "SELECT s FROM Servers s WHERE s.maxUsers = :maxUsers"),
     @NamedQuery(name = "Servers.findByConnectedUsers", query = "SELECT s FROM Servers s WHERE s.connectedUsers = :connectedUsers")})
+	
+
 public class Servers implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "adress")
-    private Integer adress;
-    @Basic(optional = false)
     @Column(name = "name")
     private String name;
+    @Basic(optional = false)
+    @Column(name = "adress")
+    private Integer adress;
     @Basic(optional = false)
     @Column(name = "location")
     private String location;
@@ -145,3 +152,5 @@ public class Servers implements Serializable {
     }
     
 }
+
+

@@ -1,13 +1,17 @@
 package org.hro.infdev03_5;
 
 import java.util.Arrays;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
+import org.apache.wicket.markup.html.link.PopupSettings;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -22,7 +26,11 @@ public class SignIn extends WebPage {
 	public SignIn(final PageParameters parameters) {
 		FeedbackPanel feedbackPanel = new FeedbackPanel("UserDoesNotExist");
 		add(new FeedbackPanel("feedback"));
-
+		
+		PopupSettings popupSettings = new PopupSettings("popuppagemap").setHeight(750).setWidth(750);
+//		add(new BookmarkablePageLink<>("popup", Register.class).setPopupSettings(popupSettings));
+		add(new BookmarkablePageLink<>("register", Register.class).setPopupSettings(popupSettings));
+		
 		final TextField<String> username = new TextField<String>("username", Model.of(""));
 		username.setRequired(true);
 		username.add(new UsernameValidator());
@@ -72,7 +80,9 @@ public class SignIn extends WebPage {
 		add(feedbackPanel);
 		form.add(username);
 		form.add(password);
-
+		
+		
+		
 	}
 
 	

@@ -2,14 +2,43 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 	<wicket:extend>
 		<h3>MANAGE CHARACTERS</h3>
-		<label wicket:id="result"></label>
-	</wicket:extend>	
+		<p>
+		<table>
+			<tr>
+				<td>Add new Character :</td>
+				<td><input type="submit" wicket:id="addCharacter"
+					value="Add Character" /></td>
+
+			</tr>
+			<tr>
+				<td>Select character :</td>
+				<td><input type="submit" wicket:id="selectCharacter"
+					value="Select Character" /></td>
+
+			</tr>
+			<tr>
+				<td>Connect to a server :</td>
+				<td><input type="submit" wicket:id="connectToServer"
+					value="Select a server" /></td>
+
+			</tr>
+			<tr>
+				<td>Characters overview :</td>
+				<td><input type="submit" wicket:id="characterOverVieuw"
+					value="Add Character" /></td>
+
+			</tr>
+</table>
+
+
+			</wicket:extend>
 </body>
 </html>

@@ -62,19 +62,48 @@ public class WicketApplication extends WebApplication {
 		user2.setBanned(false);		
 		entityManager.persist(user2);
 		
-		Servers servers = new Servers();
-		servers.setAdress(192_168_0_201);
-		servers.setName("RotterdamServer-1");
-		servers.setLocation("Rotterdam");
-		servers.setMaxUsers(5);
-		servers.setConnectedUsers(0);
-		entityManager.persist(servers);
+		Servers servers1 = new Servers();
+		servers1.setAdress(192_168_0_201);
+		servers1.setName("Rotterdam Server");
+		servers1.setLocation("Rotterdam");
+		servers1.setMaxUsers(5);
+		servers1.setConnectedUsers(0);
+		entityManager.persist(servers1);
+		
+		Servers servers2 = new Servers();
+		servers2.setAdress(192_168_0_202);
+		servers2.setName("Amsterdam Server");
+		servers2.setLocation("Amsterdam");
+		servers2.setMaxUsers(5);
+		servers2.setConnectedUsers(0);
+		entityManager.persist(servers2);
+		
+		Servers servers3 = new Servers();
+		servers3.setAdress(192_168_0_203);
+		servers3.setName("Groningen Server");
+		servers3.setLocation("Groningen");
+		servers3.setMaxUsers(5);
+		servers3.setConnectedUsers(0);
+		entityManager.persist(servers3);
+		
+		Servers servers4 = new Servers();
+		servers4.setAdress(192_168_0_204);
+		servers4.setName("Den Haag Server");
+		servers4.setLocation("Den Haag");
+		servers4.setMaxUsers(5);
+		servers4.setConnectedUsers(0);
+		entityManager.persist(servers4);
+		
+		Servers servers5 = new Servers();
+		servers5.setAdress(192_168_0_205);
+		servers5.setName("Maastricht Server");
+		servers5.setLocation("Maastricht");
+		servers5.setMaxUsers(5);
+		servers5.setConnectedUsers(0);
+		entityManager.persist(servers5);
+				
 
-		/**
-		 * 
-		 * TO DO Create database content
-		 * 
-		 */
+		
 		entityManager.getTransaction().commit();
 		entityManager.close();
 		entityManagerFactory.close();

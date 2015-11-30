@@ -38,10 +38,10 @@ public class Characters implements Serializable {
 	private String name;
 	@Basic(optional = false)
 	@Column(name = "class")
-	private int class1;
+	private String class1;
 	@Basic(optional = false)
 	@Column(name = "race")
-	private int race;
+	private String race;
 	@Basic(optional = false)
 	@Column(name = "level")
 	private int level;
@@ -58,7 +58,7 @@ public class Characters implements Serializable {
 		this.name = name;
 	}
 
-	public Characters(String name, int class1, int race, int level) {
+	public Characters(String name, String class1, String race, int level) {
 		this.name = name;
 		this.class1 = class1;
 		this.race = race;
@@ -73,19 +73,19 @@ public class Characters implements Serializable {
 		this.name = name;
 	}
 
-	public int getClass1() {
+	public String getClass1() {
 		return class1;
 	}
 
-	public void setClass1(int class1) {
+	public void setClass1(String class1) {
 		this.class1 = class1;
 	}
 
-	public int getRace() {
+	public String getRace() {
 		return race;
 	}
 
-	public void setRace(int race) {
+	public void setRace(String race) {
 		this.race = race;
 	}
 
