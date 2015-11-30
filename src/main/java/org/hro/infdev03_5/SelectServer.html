@@ -1,0 +1,24 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+<style>
+.feedbackPanelINFO {
+	color: green;
+}
+</style>
+</head>
+<body>
+	<h3>Select a server</h3>
+
+	<div wicket:id="feedback"></div>
+	<form wicket:id="form">
+		<p>
+			<label><h4>Select a server</h4> </label> <br /> <select
+				wicket:id="listSites"></select>
+		</p>
+		<input type="submit" value="Connect" />
+	</form>
+	<a wicket:id="close" href="#">close</a>
+</body>
+</html>

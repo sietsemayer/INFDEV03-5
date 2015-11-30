@@ -1,0 +1,61 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+
+<style>
+label {
+	background-color: #eee;
+	padding: 4px;
+}
+
+.feedbackPanelERROR {
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<div wicket:id="feedback"></div>
+	<form wicket:id="userForm">
+
+		<h3>Register</h3>
+
+		<p>
+		<table>
+
+			<tr>
+				<td><label>Firstname :</label></td>
+				<td><input wicket:id="firstname" type="text" size="20" /></td>
+			</tr>
+			<tr>
+				<td><label>Lastname :</label></td>
+				<td><input wicket:id="lastname" type="text" size="20" /></td>
+			</tr>
+			<tr>
+				<td><label>Username :</label></td>
+				<td><input wicket:id="username" type="text" size="20" /></td>
+			</tr>
+			<tr>
+				<td><label>Password :</label></td>
+				<td><input wicket:id="password" type="password" size="20" /></td>
+			</tr>
+			<tr>
+				<td><label>IBAN Number :</label></td>
+				<td><input wicket:id="iban" type="text" size="20" /></td>
+			</tr>
+			<tr>
+			<td></td><td><input type="submit" value="Register" /></td>
+			</tr>
+
+
+		</table>
+		</p>
+	</form>
+
+
+	<a wicket:id="close" href="#">close</a>
+
+</body>
+</html>
