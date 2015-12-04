@@ -1,50 +1,59 @@
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
-<title>Wicket Examples - linkomatic</title>
+<title>Add a character</title>
 <link rel="stylesheet" href="style.css" type="text/css" media="screen"
 	title="Stylesheet" />
-
 <style>
 .feedbackPanelINFO {
 	color: green;
 }
+.feedbackPanelERROR {
+	color: red;
+}
+
 </style>
 </head>
 <body>
 
 
-
 	<h3>Add a character</h3>
-	<p>
+
 	<div wicket:id="feedback"></div>
-	<form wicket:id="userForm">
-	<h4><label>Create a character</label></h4>
+	<form wicket:id="form">
+		<p>
+		<h4>
+			<label>Create your character </label>
+		</h4>
+		<br />
 		<table>
 			<tr>
-				<td>Character name</td>
-				<td><input wicket:id="username" type="text" size="20" /></td>
+				<td>Give a charactername :</td>
+				<td><input wicket:id="charactername" type="text" size="20" /></td>
 			</tr>
 
 			<tr>
-				<td>Select a class</td>
-				<td><select wicket:id="class"></select></td>
+				<td>Select a character :</td>
+				<td><select wicket:id="characterList"></select></td>
 			</tr>
 
 			<tr>
-				<td>Select a race</td>
-				<td><select wicket:id="race"></select></td>
+				<td>Select an appearance :</td>
+				<td><select wicket:id="raceList"></select></td>
 			</tr>
 
 			<tr>
-				<td>Select a level</td>
-				<td><select wicket:id="level"></select></td>
+				<td>Select a level :</td>
+				<td><select wicket:id="levelList"></select></td>
 			</tr>
+
 		</table>
 
-		<input type="submit" value="Create" />
+
+		</p>
+		<input type="submit" value="Submit" />
 	</form>
-
-	<a wicket:id="close" href="#">close</a>
-
+<a wicket:id = "close" href="#">close</a>
 </body>
 </html>
+
+

@@ -7,6 +7,8 @@ package org.hro.infdev03_5.entity;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +25,7 @@ import javax.persistence.Table;
  *
  * @author Sietse
  */
-@Entity
+@Entity 
 @Table(name = "characters")
 @NamedQueries({ @NamedQuery(name = "Characters.findAll", query = "SELECT c FROM Characters c"),
 		@NamedQuery(name = "Characters.findByName", query = "SELECT c FROM Characters c WHERE c.name = :name"),
@@ -45,11 +47,13 @@ public class Characters implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "level")
 	private int level;
-	@JoinTable(name = "owns", joinColumns = {
-			@JoinColumn(name = "name", referencedColumnName = "name") }, inverseJoinColumns = {
-					@JoinColumn(name = "user_name", referencedColumnName = "user_name") })
-	@ManyToMany(fetch = FetchType.LAZY)
-	private List<User> usersList;
+
+	@ManyToMany(targetEntity = User.class)
+//	@JoinTable(name = "owns")
+	private Set<User> userSet;
+//	@ManyToMany(fetch = FetchType.LAZY)
+//	@JoinTable(name = "owns")
+//	private List<User> usersList;
 
 	public Characters() {
 	}
@@ -97,12 +101,8 @@ public class Characters implements Serializable {
 		this.level = level;
 	}
 
-	public List<User> getUserList() {
-		return usersList;
-	}
-
-	public void setUsersList(List<User> usersList) {
-		this.usersList = usersList;
+	public void setUserSet(Set<User> userSet) {
+		this.userSet = userSet;
 	}
 
 	@Override

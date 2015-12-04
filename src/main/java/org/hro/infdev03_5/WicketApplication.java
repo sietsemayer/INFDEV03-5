@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.hro.infdev03_5.entity.Characters;
 import org.hro.infdev03_5.entity.Servers;
 import org.hro.infdev03_5.entity.User;
 
@@ -61,6 +62,14 @@ public class WicketApplication extends WebApplication {
 		user2.setPassword("Welkom01".toCharArray());
 		user2.setBanned(false);		
 		entityManager.persist(user2);
+		
+//		Characters chars = new Characters();
+//		chars.setName("Test");
+//		chars.setClass1("Test Class");
+//		chars.setLevel(1);
+//		chars.setRace("TestRace");
+//		entityManager.persist(chars);
+
 		
 		Servers servers1 = new Servers();
 		servers1.setAdress(192_168_0_201);
