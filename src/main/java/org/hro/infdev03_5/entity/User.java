@@ -80,12 +80,12 @@ public class User implements Serializable {
 	private boolean banned;
 
 	@ManyToMany(targetEntity = Characters.class)
-//	@JoinTable(name = "owns")
-//	@OrderBy("level DESC")
+	@JoinTable(name = "owns")
+	@OrderBy("level DESC")
 	private Set<Characters> CharactersSet;
 
 	@ManyToMany(targetEntity = Servers.class)
-//	@JoinTable(name = "stores")
+	@JoinTable(name = "stores")
 	private Set<Servers> ServersSet;
 
 	public User() {
@@ -193,6 +193,15 @@ public class User implements Serializable {
 		CharactersSet = charactersSet;
 	}
 
+	public void addCharacter(Characters characters) {
+		if (this.CharactersSet.size() < 10) {
+			this.CharactersSet.add(characters);
+		} else {
+			System.out.println("Slots are full!");
+
+		}
+	}
+
 	public void setServersSet(Set<Servers> serversSet) {
 		ServersSet = serversSet;
 	}
@@ -200,6 +209,11 @@ public class User implements Serializable {
 	@Override
 	public String toString() {
 		return "jpatutorial.Users[ userName=" + userName + " ]";
+	}
+
+	public void addServer(Servers servers) {
+		this.ServersSet.add(servers);
+
 	}
 
 }
